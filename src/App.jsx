@@ -22,8 +22,8 @@ export default function App() {
     toggleMusic,
     playEffect,
     isPlaying,
-    
-    
+
+
     volume,
     setVolume,
   } = useAudio();
@@ -38,7 +38,17 @@ export default function App() {
 
   return (
     <main className="relative min-h-screen overflow-hidden bg-zinc-950 text-white">
-
+      <div className="absolute left-4 top-4 z-50 text-l text-zinc-500">
+        dibuat oleh{" "}
+        <a
+          href="https://www.instagram.com/immanuel_ranto/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white hover:underline"
+        >
+          nuel juntak
+        </a>
+      </div>
       <Background />
       <ShootingStars />
 
