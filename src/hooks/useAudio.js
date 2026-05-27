@@ -44,10 +44,7 @@ export default function useAudio() {
 
     } catch (error) {
 
-      console.log(
-        "autoplay diblok browser:",
-        error
-      );
+      console.log(error);
 
     }
   };
@@ -69,10 +66,31 @@ export default function useAudio() {
     }
   };
 
+  const playEffect = (soundPath) => {
+
+    pauseMusic();
+
+    const effect = new Audio(soundPath);
+
+    effect.volume = volume;
+
+    effect.play();
+
+    effect.onended = () => {
+
+      playMusic();
+
+    };
+  };
+
   return {
+
     playMusic,
     pauseMusic,
     toggleMusic,
+
+    playEffect,
+
     isPlaying,
 
     volume,

@@ -20,7 +20,9 @@ export default function App() {
   const {
     playMusic,
     toggleMusic,
+    playEffect,
     isPlaying,
+    
     
     volume,
     setVolume,
@@ -56,6 +58,7 @@ export default function App() {
         isPlaying={isPlaying}
         volume={volume}
         setVolume={setVolume}
+        playEffect={playEffect}
       />
 
     </main>
