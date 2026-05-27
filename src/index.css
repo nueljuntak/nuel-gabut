@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #09090b;
+  color: white;
+  font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.shooting-star {
+  position: absolute;
+  width: 150px;
+  height: 2px;
+
+  background: linear-gradient(
+    90deg,
+    white,
+    transparent
+  );
+
+  border-radius: 999px;
+
+  animation: shoot 3s linear infinite;
+  opacity: 0;
+}
+
+.shooting-star:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.shooting-star:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.shooting-star:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+@keyframes shoot {
+  0% {
+    transform:
+      translateX(0)
+      translateY(0)
+      rotate(215deg);
+
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    transform:
+      translateX(-600px)
+      translateY(300px)
+      rotate(215deg);
+
+    opacity: 0;
+  }
+}
